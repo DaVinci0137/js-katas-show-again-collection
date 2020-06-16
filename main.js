@@ -157,9 +157,9 @@ mainElement.append(kata12Heading)
 
 let array12 = []
 for (let kata12 = 0; kata12 < sampleArray.length; kata12 += 1) {
-    let currentNumber = sampleArray[kata12]
-    if (currentNumber % 2 === 0) {
-        array12.push(currentNumber)
+    let currentNumber12 = sampleArray[kata12]
+    if (currentNumber12 % 2 === 0) {
+        array12.push(currentNumber12)
     }
 }
 
@@ -169,9 +169,24 @@ const kata13Heading = document.createElement('h1')
 kata13Heading.append('Kata 13')
 mainElement.append(kata13Heading)
 
+let odds = sampleArray.filter(n => n % 2)
+
+mainElement.append(odds)
+
 const kata14Heading = document.createElement('h1')
 kata14Heading.append('Kata 14')
 mainElement.append(kata14Heading)
+
+let sum = 0;
+let index = sampleArray.length;
+while (index--) {
+    sum += Math.pow(sampleArray[index], 2);
+}
+
+mainElement.append(sum)
+
+
+mainElement.append()
 
 const kata15Heading = document.createElement('h1')
 kata15Heading.append('Kata 15')
@@ -197,6 +212,14 @@ const kata17Heading = document.createElement('h1')
 kata17Heading.append('Kata 17')
 mainElement.append(kata17Heading)
 
+let lowestValue = Math.min.apply(null, sampleArray)
+
+mainElement.append(lowestValue)
+
 const kata18Heading = document.createElement('h1')
 kata18Heading.append('Kata 18')
 mainElement.append(kata18Heading)
+
+let highestValue = Math.max.apply(null, sampleArray)
+
+mainElement.append(highestValue)
